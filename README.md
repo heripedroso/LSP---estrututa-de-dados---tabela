@@ -9,7 +9,6 @@ nNumCad = R034FUN.NumCad;
 ```
 No entanto, iremos sentir a necessidade de agruparmos esses valores em algo semelhante a um objeto do tipo DTO, tal como.
 ```
-@==============================================================================@
 Definir Tabela objColaborador[1] = {   
                                      Numero nNumEmp;
                                      Numero nTipCol;                                     
@@ -19,11 +18,9 @@ Definir Tabela objColaborador[1] = {
                                      Numero n2TNumCra;  @ Crachá do 2º vínculo (2º teto), caso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
                                    };             
 
-@==============================================================================@
 ```
 Os casos em que senti mais esta necessidade foram nos agrupamentos de valores de saída de alguma função, e que mais tarde poderiam também servir como entrada para outras funções.
 ```
-@==============================================================================@
 Definir Tabela objHorario[1] = {   
                                      Numero nCodHorario;
                                      Numero nCargaHorariaDiaria;                                     
@@ -35,40 +32,22 @@ Definir Tabela objHorario[1] = {
                                      Numero nHoraSaidaToleranciaApos;  @ Limite que define até em que momento uma marcação se torna válida. Por exemplo: marcações de ponto que são registradas muito tarde não são consideradas válidas. @
                                      Numero nHoraMetadeDoPeriodo; @ Variável de referência para definir se uma marcação é de entrada ou de saída. Para os horários norturno e de 24h, a virada do dia é a referência. @
                                };             
-
-@==============================================================================@
 ```
 
+Se usarmos estes agrupamentos em chamadas de funções, o código se torna bem mais limpo e intuitivo.
 
 
 ```
-@==============================================================================@
-Definir Tabela tabSituacoesMes[4] = {   
-                                     Numero nQtdeFaltasDiurnas;
-                                     Numero nQtdeFaltasNoturnas;                                     
-                                     Numero nQtdeSuspensoes; 
-                                     Numero nQtdeAdvertencias;  
-                                     Numero nQtdeOutrosAfastamentos;  };             
+Definir Funcao verificaSeHouveFalta(Tabela objColab, Tabela objHor);
+```
 
-@==============================================================================@
-Definir Funcao ZeraTabSituacoesMes();
-
-Funcao ZeraTabSituacoesMes();
-{ 
-   nContador = 1;
-   ENQUANTO(nContador <= 4) 
-   {         
-      tabSituacoesMes[nContador].nQtdeFaltasDiurnas = 0;
-      tabSituacoesMes[nContador].nQtdeFaltasNoturnas = 0;  
-      tabSituacoesMes[nContador].nQtdeSuspensoes = 0;
-      tabSituacoesMes[nContador].nQtdeAdvertencias = 0;
-      tabSituacoesMes[nContador].nQtdeOutrosAfastamentos = 0;  
-
-      nContador =  nContador + 1;  
-   }; 
-
-};
-@==============================================================================@
+Por sua vez, a função verificaSeHouveFalta poderia armazenar os cálculos em outro agrupamento.
+```
+Definir Tabela objMarcacoesApuradas[1] = {   
+                                     Numero nHouveFalta; @ Valor booleano: 0 - não houve falta, 1 - Houve falta @
+                                     Numero nPrimeiraMarcacaoEntradaValida; @ Marcação de entrada válida. @  
+                                     Numero nUltimaMarcacaoSaidaValida; @ Marcação de saída válida. @
+                                   };   
 ```
 
 ## Recomendações
