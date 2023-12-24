@@ -1,6 +1,7 @@
 # LSP---estrututa-de-dados---tabela
 Estrutura de dados do tipo TABELA
 
+## Por que usar tabela para agrupar valores?
 Geralmente iremos ver valores serem atribuídos à variáveis isoladamente:
 ```
 nNumEmp = R034FUN.NumEmp;
@@ -33,7 +34,7 @@ Definir Tabela objHorario[1] = {
                                      Numero nHoraMetadeDoPeriodo; @ Variável de referência para definir se uma marcação é de entrada ou de saída. Para os horários norturno e de 24h, a virada do dia é a referência. @
                                };             
 ```
-
+## Exemplo de uso
 Se usarmos estes agrupamentos em chamadas de funções, o código se torna bem mais limpo e intuitivo.
 
 
