@@ -72,7 +72,33 @@ Se usarmos estes agrupamentos em chamadas de funções, o código se torna bem m
 
 
 ```
-Definir Funcao verificaSeHouveFalta(Tabela objColab, Tabela objHor);
+Definir Funcao verificaSeHouveFalta();
+
+Funcao verificaSeHouveFalta(){
+
+     @ Carrega as variáveis de entrada. @
+     nNumEmp = objColaborador[1].nNumEmp;
+     nTipCol = objColaborador[1].nTipCol;  
+     nNumCad = objColaborador[1].nNumCad;
+     nNumCra = objColaborador[1].nNumCra;
+
+     nCodHorario= objHorario[1].nCodHorario;
+     nHoraEntrada = objHorario[1].nHoraEntrada; 
+     nHoraSaida = objHorario[1].nHoraSaida;
+     nCargaHorariaDiaria = objHorario[1].nCargaHorariaDiaria;
+     nEhHorarioNoturno = objHorario[1].nEhHorarioNoturno;
+     nEhHorario24h = objHorario[1].nEhHorario24h;
+     nToleranciaAtraso = objHorario[1].nToleranciaAtraso;
+     nToleranciaSaidaAntecipada = objHorario[1].nToleranciaSaidaAntecipada;
+     nHoraEntradaToleranciaAntes = objHorario[1].nHoraEntradaToleranciaAntes;
+     nHoraSaidaToleranciaApos = objHorario[1].nHoraSaidaToleranciaApos;
+     nHoraMetadeDoPeriodo = objHorario[1].nHoraMetadeDoPeriodo;
+
+     /*
+          Restante da regra aqui.
+     */
+
+}
 ```
 
 Por sua vez, a função verificaSeHouveFalta poderia armazenar os cálculos em outro agrupamento.
