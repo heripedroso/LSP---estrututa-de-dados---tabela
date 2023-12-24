@@ -24,7 +24,9 @@ Os casos em que senti mais esta necessidade foram nos agrupamentos de valores de
 ```
 Definir Tabela objHorario[1] = {   
                                      Numero nCodHorario;
-                                     Numero nCargaHorariaDiaria;                                     
+                                     Numero nHoraEntrada;
+                                     Numero nHoraSaida;
+                                     Numero nCargaHorariaDiaria;                       
                                      Numero nEhHorarioNoturno; @ Valor booleano: 0 - horário diurno, 1 - horário noturno @
                                      Numero nEhHorario24h; @ Valor booleano: 0 - não é um horário de 24h, 1 - é um horário de 24h (plantão) @                                        
                                      Numero nToleranciaAtraso;
