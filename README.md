@@ -14,8 +14,8 @@ Definir Tabela objColaborador[1] = {
                                      Numero nTipCol;                                     
                                      Numero nNumCad; 
                                      Numero nNumCra;  
-                                     Numero n2TNumCad;  @ Cadastro do 2º vínculo (2º teto), caso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
-                                     Numero n2TNumCra;  @ Crachá do 2º vínculo (2º teto), caso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
+                                     Numero n2TNumCad;  @ Cadastro do 2º vínculo (2º teto). Pode ocorrer caso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
+                                     Numero n2TNumCra;  @ Crachá do 2º vínculo (2º teto). Pode ocorrercaso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
                                    };             
 
 ```
@@ -24,10 +24,10 @@ Os casos em que senti mais esta necessidade foram nos agrupamentos de valores de
 Definir Tabela objHorario[1] = {   
                                      Numero nCodHorario;
                                      Numero nCargaHorariaDiaria;                                     
-                                     Numero nEhHorarioNoturno; 
-                                     Numero nEhHorario24h;  
-                                     Numero nToleranciaSaidaAntecipada;  
+                                     Numero nEhHorarioNoturno; @ Valor booleano: 0 - horário diurno, 1 - horário noturno @
+                                     Numero nEhHorario24h; @ Valor booleano: 0 - não é um horário de 24h, 1 - é um horário de 24h (plantão) @                                        
                                      Numero nToleranciaAtraso;
+                                     Numero nToleranciaSaidaAntecipada;
                                      Numero nHoraEntradaToleranciaAntes; @ Limite que define a partir de que momento uma marcação se torna válida. Por exemplo: marcações de ponto que são registradas muito cedo não são consideradas válidas. @
                                      Numero nHoraSaidaToleranciaApos;  @ Limite que define até em que momento uma marcação se torna válida. Por exemplo: marcações de ponto que são registradas muito tarde não são consideradas válidas. @
                                      Numero nHoraMetadeDoPeriodo; @ Variável de referência para definir se uma marcação é de entrada ou de saída. Para os horários norturno e de 24h, a virada do dia é a referência. @
