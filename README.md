@@ -67,7 +67,7 @@ Funcao retornaCargaHorariaETurno(Numero nCodHorario);
 
 
 ```
-## Exemplo de uso
+## Exemplo de uso como parâmetro de entrada em funções.
 Se usarmos estes agrupamentos em chamadas de funções, o código se torna bem mais limpo e intuitivo.
 
 
