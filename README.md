@@ -10,21 +10,28 @@ nNumCad = R034FUN.NumCad;
 ```
 No entanto, iremos sentir a necessidade de agruparmos esses valores em algo semelhante a um objeto do tipo DTO, tal como.
 ```
-Definir Tabela objColaborador[1] = {   
+Definir Tabela objColaborador[2] = {   
                                      Numero nNumEmp;
                                      Numero nTipCol;                                     
                                      Numero nNumCad; 
-                                     Numero nNumCra;  
-                                     Numero n2TNumCad;  @ Cadastro do 2º vínculo (2º teto). Pode ocorrer caso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
-                                     Numero n2TNumCra;  @ Crachá do 2º vínculo (2º teto). Pode ocorrercaso o colaborador seja da área assistencial (médico, enfermeiro, psicólogo, etc). @
+                                     Numero nNumCra;
+                                     Alfa aFuncao;
+                                     Alfa aCodCargo;
                                    };
 
 objColaborador[1].nNumEmp = R034FUN.NumEmp;
 objColaborador[1].nTipCol = R034FUN.TipCol;  
 objColaborador[1].nNumCad = R034FUN.NumCad;
 objColaborador[1].nNumCra = R034FUN.NumCra;
-objColaborador[1].n2TNumCad = 0;
-objColaborador[1].n2TNumCra = 0;  
+
+/*
+Preenche a posição 2 se houver 2º vínculo
+objColaborador[2].nNumEmp = 0;
+objColaborador[2].nTipCol = 0;
+objColaborador[2].nNumCad = 0;
+objColaborador[2].nNumCra = 0;
+*/
+
 
 ```
 Os casos em que senti mais esta necessidade foram nos agrupamentos de valores de saída de alguma função, e que mais tarde poderiam também servir como entrada para outras funções.
