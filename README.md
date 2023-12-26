@@ -8,7 +8,7 @@ nNumEmp = R034FUN.NumEmp;
 nTipCol = R034FUN.TipCol;
 nNumCad = R034FUN.NumCad;
 ```
-No entanto, iremos sentir a necessidade de agruparmos esses valores em algo semelhante a um objeto do tipo DTO, tal como.
+No entanto, iremos sentir a necessidade de agruparmos esses valores em algo semelhante a um objeto do tipo DTO, tal como:
 ```
 Definir Tabela objColaborador[2] = {   
                                      Numero nNumCPF;
