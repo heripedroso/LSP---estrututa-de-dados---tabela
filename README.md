@@ -11,7 +11,7 @@ nNumCad = R034FUN.NumCad;
 No entanto, iremos sentir a necessidade de agruparmos esses valores em algo semelhante a um objeto do tipo DTO, tal como:
 ```
 /*
-A posição 02 armazena as informações do 2º teto, caso tenho. Para os profissionais da saúde, é permitido possuir mais de um vínculo desde que em horário diferentes.
+A posição 02 armazena as informações do 2º teto, caso o colaborador tenha. Para os profissionais da saúde, é permitido possuir mais de um vínculo desde que em horário diferentes.
 */
 Definir Tabela objColaborador[2] = {   
                                      Numero nNumCPF;
