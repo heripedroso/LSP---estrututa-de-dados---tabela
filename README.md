@@ -11,6 +11,7 @@ nNumCad = R034FUN.NumCad;
 No entanto, iremos sentir a necessidade de agruparmos esses valores em algo semelhante a um objeto do tipo DTO, tal como.
 ```
 Definir Tabela objColaborador[2] = {   
+                                     Numero nNumCPF;
                                      Numero nNumEmp;
                                      Numero nTipCol;                                     
                                      Numero nNumCad; 
@@ -19,6 +20,7 @@ Definir Tabela objColaborador[2] = {
                                      Alfa aCodCargo;
                                    };
 
+objColaborador[1].nNumCPF = R034FUN.NumCpf;
 objColaborador[1].nNumEmp = R034FUN.NumEmp;
 objColaborador[1].nTipCol = R034FUN.TipCol;  
 objColaborador[1].nNumCad = R034FUN.NumCad;
